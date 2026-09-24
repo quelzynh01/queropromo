@@ -152,13 +152,28 @@ section.bloco{padding:4.5rem 0}
 
 footer{background:var(--tinta);color:#fff;text-align:center;padding:1.6rem 0;font-size:.88rem}
 
+.hero-texto{display:flex;flex-direction:column;align-items:flex-start}
+
+/* ---------- Celular: botão do WhatsApp visível na primeira tela ---------- */
 @media (max-width:820px){
-  .hero{padding:2rem 0 3.5rem}
-  .hero .wrap{grid-template-columns:1fr}
-  .hero-logo{order:-1;width:min(280px,80%)}
-  .balao{font-size:1rem;right:-8%}
-  .btn-zap{width:100%}
+  .topo .wrap{padding:.45rem 0}
+  .marca img{width:40px;height:40px}
+  .marca span{font-size:1.3rem}
   .ao-vivo{display:none}
+
+  .hero{padding:1rem 0 2.8rem}
+  .hero .wrap{grid-template-columns:1fr;gap:.6rem}
+  .hero-logo{order:-1;width:min(150px,42vw)}
+  .hero-logo img{filter:drop-shadow(4px 5px 0 rgba(0,0,0,.85))}
+  .balao{font-size:.8rem;padding:.4rem .6rem .25rem;right:-45%;top:10%;border-width:2px;box-shadow:3px 3px 0 var(--tinta)}
+
+  .hero-texto{align-items:stretch;text-align:center}
+  .selo-topo{order:1;align-self:center;font-size:.78rem;padding:.25rem .75rem;margin-bottom:.6rem}
+  .hero h1{order:2;font-size:clamp(2.3rem,11vw,3rem)}
+  .hero-sub{order:3;font-size:1rem;margin:.6rem auto 1rem}
+  .btn-zap{order:4;width:100%;font-size:clamp(.88rem,4.3vw,1.05rem);padding:1rem .6rem;gap:.5rem;white-space:nowrap}
+  .garantias{order:5;justify-content:center;margin-top:.8rem;font-size:.8rem}
+  .silencioso{order:6;margin:1.6rem auto 0;text-align:left}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
@@ -181,7 +196,7 @@ footer{background:var(--tinta);color:#fff;text-align:center;padding:1.6rem 0;fon
 <main>
   <section class="hero">
     <div class="wrap">
-      <div>
+      <div class="hero-texto">
         <span class="selo-topo">🔥 Promoções e cupons atualizados hoje</span>
         <h1 class="display">Pare de pagar <span class="laranja">caro!</span></h1>
         <p class="hero-sub">A gente garimpa os maiores descontos e grita pra você direto no WhatsApp.</p>
